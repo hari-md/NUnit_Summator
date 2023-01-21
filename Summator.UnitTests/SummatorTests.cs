@@ -34,6 +34,6 @@ namespace Summator.UnitTests
             Assert.AreEqual(expected, actual);
         }
 
-        //kkk
+    
     }
 }
