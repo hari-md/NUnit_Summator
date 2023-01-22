@@ -18,6 +18,17 @@ namespace Summator
             return sum;
         }
 
+        public static double Average(int[] arr)
+        {
+            double sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+            return sum / arr.Length;
+
+        }
+
         //Sum is the Methed that we created. It can bbe tested with another program from the dev.
         
         //public static void Test_SumTwoNumbers()
