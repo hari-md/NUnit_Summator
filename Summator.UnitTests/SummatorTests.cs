@@ -45,7 +45,7 @@ namespace Summator.UnitTests
         }
         
         [Test]
-        public void Test_Summatro_BigNumbers()
+        public void Test_Summator_BigNumbers()
         {
             var nums = new int[] { 2000000000, 2000000000, 2000000000, 2000000000, };
             var actual = Summator.Sum(nums);
@@ -55,7 +55,47 @@ namespace Summator.UnitTests
 
         }
 
-     
-    
+        [Test]
+        public void Test_Summator_EvenNumbers()
+        {
+            var nums = new int[] {2, 4, 6, 8, 10};
+            var actual = Summator.Sum(nums);
+            var expected = 30;
+            
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Test_Summator_AverageOddNumbers()
+        {
+            var nums = new int[] { 3, 5, 7, 9 };
+            var actual = Summator.Average(nums);
+            var expected = 6;
+                                   
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
+        public void Test_Summator_AverageInRange()
+        {
+            var nums = new int[] { 15, 30, 45, 10 };
+            var actual = Summator.Average(nums);
+            var expected = 25;
+
+            Assert.That(expected, Is.InRange(0, 100));
+
+        }
+
+        [Test]
+        public void AssertionExamples()
+        {
+            //Assertion for expected exception:
+            Assert.That(() => "abc" [45], Throws.InstanceOf<IndexOutOfRangeException>());
+
+            //Assertion for regex matching:
+            string date = "7/11/2022";
+            Assert.That(date, Does.Match(@"^\d{1,2}/\d{1,2}/\d{4}$"));
+
+        }
     }
 }
