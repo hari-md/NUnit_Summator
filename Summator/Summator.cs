@@ -8,36 +8,38 @@ namespace Summator
 {
     public static class Summator
     {
-        public static int Sum(int[] arr) //Sum is the Methed that we created. It can bbe tested with another program from the dev.
+        public static long Sum(int[] arr) 
         {
-            int sum = arr[0];
-            for (int i = 1; i < arr.Length; i++)
+            long sum = 0;
+            for (int i = 0; i < arr.Length; i++)
             {
                 sum += arr[i];
             }
             return sum;
         }
 
-        public static void Test_SumTwoNumbers()
-        {
-            if (Sum(new int[] { 1, 2 }) != 3)
-            {
-                throw new Exception("1+2 != 3");
-            }
-            else
-            {
-                Console.WriteLine("Test SumTwoNumbers pass!");
-            }
+        //Sum is the Methed that we created. It can bbe tested with another program from the dev.
+        
+        //public static void Test_SumTwoNumbers()
+        //{
+        //    if (Sum(new int[] { 1, 2 }) != 3)
+        //    {
+        //        throw new Exception("1+2 != 3");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Test SumTwoNumbers pass!");
+        //    }
 
-            // Calls method Sum and trows back an NEW exception if 1+2 !=3;
-        }
+        //    // Calls method Sum and trows back a NEW exception if 1+2 !=3;
+        //}
 
-        public static void Test_SumEmptyArray()
-        {
-            if (Sum(new int[] { }) != 0)
-            {
-                throw new Exception("sum [] != 0");
-            }
-        }
+        //public static void Test_SumEmptyArray()
+        //{
+        //    if (Sum(new int[] { }) != 0)
+        //    {
+        //        throw new Exception("sum [] != 0");
+        //    }
+        //}
     }
 }

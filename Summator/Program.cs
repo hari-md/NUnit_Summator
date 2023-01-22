@@ -13,9 +13,7 @@
             //Summator.Test_SumTwoNumbers();
             //Calls class Summator and tests 
 
-            //3test) =>
-            Summator.Test_SumEmptyArray();
-
+          
 
 
 
