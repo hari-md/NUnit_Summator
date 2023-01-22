@@ -26,7 +26,7 @@ namespace Summator
             }
             else
             {
-                Console.WriteLine("Test SumTwoNumbers pass!");
+                Console.WriteLine("Test pass!");
             }
 
             // Calls method Sum and trows back an NEW exception if 1+2 !=3;
