@@ -31,8 +31,9 @@ namespace Summator
 
         }
 
+
         //Sum is the Methed that we created. It can bbe tested with another program from the dev.
-        
+
         //public static void Test_SumTwoNumbers()
         //{
         //    if (Sum(new int[] { 1, 2 }) != 3)
