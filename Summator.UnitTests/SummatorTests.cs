@@ -6,27 +6,29 @@ namespace Summator.UnitTests
     {
         //Tests for Summator:
         [Test]
-        public void Test_Summator_SumTwoPositiveNumbers()
+        public void TestSumPositiveNumbers()
         {
             var nums = new int[] { 1, 2 };
             var actual = Summator.Sum(nums);
+
             var expected = 3;
 
             Assert.AreEqual(expected, actual);
         }
         
         [Test]
-        public void Test_Summator_SumTwoNegativeNumbers()
+        public void TestSumNegativeNumbersbers()
         {
             var nums = new int[] { -1, -2 };
             var actual = Summator.Sum(nums);
+
             var expected = -3;
 
             Assert.AreEqual(expected, actual);
         }
 
         [Test]
-        public void Test_Summator_SumOneNumber()
+        public void TestSumOneNumber()
         {
             var nums = new int[] { 1 };
             var actual = Summator.Sum(nums);
@@ -37,20 +39,22 @@ namespace Summator.UnitTests
         }
 
         [Test]
-        public void Test_Summator_ZeroNumbers()
+        public void TestSumZeroNumbers()
         {
             var nums = new int[] { };
             var actual = Summator.Sum(nums);
+
             var expected = 0;
 
             Assert.AreEqual(expected, actual);
         }
         
         [Test]
-        public void Test_Summator_BigNumbers()
+        public void TestSumBigNumbers()
         {
             var nums = new int[] { 2000000000, 2000000000, 2000000000, 2000000000, };
             var actual = Summator.Sum(nums);
+
             var expected = 8000000000;
 
             Assert.AreEqual(expected, actual);
@@ -58,10 +62,11 @@ namespace Summator.UnitTests
         }
 
         [Test]
-        public void Test_Summator_EvenNumbers()
+        public void TestSumEvenNumbers()
         {
             var nums = new int[] {2, 4, 6, 8, 10};
             var actual = Summator.Sum(nums);
+
             var expected = 30;
             
             Assert.AreEqual(expected, actual);
@@ -70,20 +75,22 @@ namespace Summator.UnitTests
         
         //Tests for Average:
         [Test]
-        public void Test_Summator_AverageOddNumbers()
+        public void TestAverageOddNumbers()
         {
             var nums = new int[] { 3, 5, 7, 9 };
             var actual = Summator.Average(nums);
+
             var expected = 6;
                                    
             Assert.AreEqual(expected, actual);
         }
 
         [Test]
-        public void Test_Summator_AverageInRange()
+        public void TestAverageInRange()
         {
             var nums = new int[] { 15, 30, 45, 10 };
             var actual = Summator.Average(nums);
+
             var expected = 25;
 
             Assert.That(expected, Is.InRange(0, 100));
@@ -91,26 +98,28 @@ namespace Summator.UnitTests
         }
 
         [Test]
-        public void Test_Summator_Average_OnePositiveOneNegativeNumber()
+        public void TestAverageOnePositiveOneNegativeNumber()
         {
             var nums = new int[] { -2, 16 };
             var actual = Summator.Average(nums);
+
             var expected = 7;
 
             Assert.That(actual, Is.EqualTo(expected));
         }
 
         [Test]
-        public void Test_Average_WithZero()
+        public void TestAverageWithZero()
         {
             var nums = new int [] { 0 };
+
             var actual = Summator.Average(nums);
 
             Assert.That(actual, Is.Zero);
         }
 
         [Test]
-        public void Test_Average_EmptyArray()
+        public void TestAverageEmptyArray()
         {
             int[] nums = new int[] { };
 
@@ -118,7 +127,10 @@ namespace Summator.UnitTests
 
         }
 
-        
+
+
+
+
         //Assertions Examples:
         [Test]
         public void AssertionExamples()

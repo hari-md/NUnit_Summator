@@ -9,12 +9,12 @@
             //We call the class Summator to test the method Sum with new integer numbers (those in the array-{ 1, 2, 3 });
 
 
-            //2test) => 
+            //2test => 
             //Summator.Test_SumTwoNumbers();
-            //Calls class Summator and tests 
 
             //3tets => method Avarage
             Console.WriteLine("The average is:" + Summator.Average(new int[] { }));
+
             
         }
     }
