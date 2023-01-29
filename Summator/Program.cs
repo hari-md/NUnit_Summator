@@ -13,7 +13,7 @@
             //Summator.Test_SumTwoNumbers();
 
             //3tets => method Avarage
-            Console.WriteLine("The average is:" + Summator.Average(new int[] { }));
+           // Console.WriteLine("The average is:" + Summator.Average(new int[] { }));
 
             
         }
