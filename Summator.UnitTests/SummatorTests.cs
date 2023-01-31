@@ -52,7 +52,7 @@ namespace Summator.UnitTests
         [Test]
         public void TestSumBigNumbers()
         {
-            var nums = new int[] { 2000000000, 2000000000, 2000000000, 2000000000, };
+            var nums = new int[] {2000000000, 2000000000, 2000000000, 2000000000};
             var actual = Summator.Sum(nums);
 
             var expected = 8000000000;
@@ -72,7 +72,23 @@ namespace Summator.UnitTests
             Assert.AreEqual(expected, actual);
         }
 
-        
+        //DDT
+
+        [TestCase(new int[] {1, 2}, 3)]
+        [TestCase(new int[] {-5, -2}, -7)]
+        [TestCase(new int[] {1}, 1)]
+        [TestCase(new int[] {}, 0)]
+        [TestCase(new int[] {5, 0}, 5)]
+        [TestCase(new int[] { 2000000000, 2000000000, 2000000000, 2000000000 }, 8000000000)]
+        [TestCase(new int[] { 2, 4, 6, 8, 10 }, 30)]
+        public void TestSummatorSumDDT(int[] values, long expectedResult)
+        {
+            var actualResult = Summator.Sum(values);
+
+            Assert.That(actualResult, Is.EqualTo(expectedResult));
+        }
+
+
         //Tests for Average:
         [Test]
         public void TestAverageOddNumbers()
@@ -127,10 +143,7 @@ namespace Summator.UnitTests
 
         }
 
-
-
-
-
+        
         //Assertions Examples:
         [Test]
         public void AssertionExamples()
