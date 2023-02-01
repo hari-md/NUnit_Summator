@@ -58,7 +58,6 @@ namespace Summator.UnitTests
             var expected = 8000000000;
 
             Assert.AreEqual(expected, actual);
-
         }
 
         [Test]
@@ -72,8 +71,8 @@ namespace Summator.UnitTests
             Assert.AreEqual(expected, actual);
         }
 
-        //DDT
 
+        //DDT
         [TestCase(new int[] {1, 2}, 3)]
         [TestCase(new int[] {-5, -2}, -7)]
         [TestCase(new int[] {1}, 1)]
@@ -110,7 +109,6 @@ namespace Summator.UnitTests
             var expected = 25;
 
             Assert.That(expected, Is.InRange(0, 100));
-
         }
 
         [Test]
@@ -140,7 +138,6 @@ namespace Summator.UnitTests
             int[] nums = new int[] { };
 
             Assert.That(() => Summator.Average(nums), Throws.Nothing);
-
         }
 
         
@@ -150,27 +147,21 @@ namespace Summator.UnitTests
         {
             //Assertion for expected exception:
             Assert.That(() => "abc"[45], Throws.InstanceOf<IndexOutOfRangeException>());
-                        
 
             //Assertion for regex matching:
             string date = "7/11/2022";
             Assert.That(date, Does.Match(@"^\d{1,2}/\d{1,2}/\d{4}$"));
                         
-
             //Collection assertion:
             Assert.That(new int[] { 1, 5, 7, 12 }, Has.Member(5));
-
 
             //Collection range assertion:
             var percentages = new int[] { 10, 30, 290, 50, 100 };
             Assert.That(percentages, Is.All.InRange(0, 1000));
 
-
             //Assertion messages:
             double percentage = 99.5;
             //fail - Assert.That(percentage, Is.EqualTo(100), "ДДС-то, което се връща");
-
         }
-
     }
 }

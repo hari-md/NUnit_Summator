@@ -28,7 +28,6 @@ namespace Summator
                 sum += arr[i];
             }
             return sum / arr.Length;
-
         }
 
 
